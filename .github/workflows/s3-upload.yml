@@ -26,6 +26,16 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
 
-    - name: Upload to S3
+    - name: Check for valid changes
+      id: check_changes
+      run: |
+        if git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -qvE '^(README.md|.github/.*|)$'; then
+          echo "::set-output name=changes::true"
+        else
+          echo "::set-output name=changes::false"
+        fi
+
+    - name: Upload to 
+      if: steps.check_changes.outputs.changes == 'true'
       run: |
         aws s3 sync src s3://katnmatt/
