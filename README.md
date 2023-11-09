@@ -1,4 +1,4 @@
-## Happy birthday, Matt!
+## Happy birthday, Matt! 🎂
 This is a birthday present for my boyfriend :)
 Go to [bday.katnmatt.live](http://katnmatt.s3-website-us-east-1.amazonaws.com/) to check it out.
 
