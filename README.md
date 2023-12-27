@@ -2,6 +2,9 @@
 This is a birthday present for my boyfriend :)
 Go to [bday.katnmatt.live](http://katnmatt.s3-website-us-east-1.amazonaws.com/) to check it out.
 
+## A Note
+You might think making you a website is the gift, but really, the gift is this repo. Remember when you said you'd be interested in possibly learning Terraform, AWS, and CI/CD sometime over you winter break? Well, I created this repo mostly so I could walk you through it and how you could do it yourself. However, I know homework is maybe not the best birthday gift, so if you want nothing to do with it, you can just consider the site your gift. But when you're ready to learn more about this project, I'll be happy to use it to teach you some more skills for your resume. Happy birthday!
+
 ## Features
 * Static website (HTML, CSS, JavaScript)
   * Relies on client-side processing, reducing need for server-side logic
