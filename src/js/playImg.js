@@ -16,7 +16,7 @@ var imageArray = [
   "pic/pic13.png", "pic/pic14.png", "pic/pic15.png", "pic/pic16.png",
   "pic/pic17.png", "pic/pic18.png", "pic/pic19.png", "pic/pic20.png", 
   "pic/pic21.png", "pic/pic22.png", "pic/pic23.png", "pic/pic24.png",
-  "pic/pic25.png", "pic/pic26.png"
+  "pic/pic25.png", "pic/pic26.png", "pic/pic27.png"
 ];
 const txtArray = [
 	"To be known is to be loved,",
@@ -43,7 +43,8 @@ const txtArray = [
 	"(and a permanent binding contract that you'll never escape).",
   "As you say, 'Keep it real my gang'",
 	"And since I know you're going to ask me...",
-	"yes, I still like you.",
+	"Yes.",
+  "I still like you.",
   "Happy birthday! <3"
   ];
   
