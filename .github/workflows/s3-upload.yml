@@ -4,29 +4,31 @@ name: S3 Upload
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push to main
+  # Auto triggers the workflow on push to main
   push:
     branches: [ "main" ]
 
-  # Allows running workflow manually from the Actions tab
+  # Allows running workflow manually from the Actions tab, too
   workflow_dispatch:
 
 jobs:
   upload:
+    # Specifies type of virtual machine/environment to run on
     runs-on: ubuntu-latest
 
+    # Specify the 3 steps for the upload job
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+    - name: Checkout code # Checks out this repository's code
+      uses: actions/checkout@v3 
 
-    - name: Set up AWS CLI
-      uses: aws-actions/configure-aws-credentials@v2
+    - name: Set up AWS CLI # Sets up AWS CLI with provided credentials
+      uses: aws-actions/configure-aws-credentials@v2 
       with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-1
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }} # Access key ID stored in GitHub secrets
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }} # Secret access key stored in GitHub secrets
+        aws-region: us-east-1 # AWS region where the S3 bucket is located
 
-
-    - name: Upload to S3 bucket
+    - name: Upload to S3 bucket # Syncs the contents of the 'src' directory to the specified S3 bucket
       run: |
-        aws s3 sync src s3://katnmatt/
+        aws s3 sync src s3://katnmatt/ 
+
